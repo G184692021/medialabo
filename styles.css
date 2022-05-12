@@ -1,0 +1,26 @@
+body{
+  color:wheat;
+}
+
+h1,h2,h4{
+  color: black;
+}
+h3{
+  color: black;
+  background:linear-gradient(-45deg, #fff, #8174f8);
+}
+
+p{
+  color:rgb(62, 62, 62)
+}
+
+a:link{
+  color: rgb(253, 149, 201);
+}
+a:visited{
+  color:#8174f8
+}
+a:hover{
+  color:rgb(253, 105, 179)
+}
+ 
