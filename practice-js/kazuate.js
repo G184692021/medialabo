@@ -21,8 +21,9 @@ function hantei() {
     kaisu++
     console.log(kaisu + "回目の予想" + yoso);
 
-    if(kaisu > 4){
+    if(kaisu > 3){
         console.log("答えは" + kotae + "でした.すでにゲームは終わっています")
+        return
     }
 
     if(yoso === kotae){
