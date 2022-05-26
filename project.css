@@ -1,11 +1,11 @@
 body{
-    color:white;
+    background-color:rgb(191, 220, 247);
 }
 
-h1,h2,h4{
+h2,h3{
     color: black;
 }
-h3{
+h1{
     color:black;
     background:linear-gradient(-20deg,#fff,#9293e7)
 }
