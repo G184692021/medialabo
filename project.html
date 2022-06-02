@@ -5,16 +5,19 @@
     <title>天気</title>
         <script src="weather.js" defer></script>
         <link rel="stylesheet" href="project.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
   </head>
 
   <body>
     <h2>世界の天気</h2>
-    <3>東京（日本）の天気</3>
+    
+    <input id="tenki" type="text" name="tenki" size="20">
+    <button id="sendRequest">❤</button>
+    <h4><span id='takahashi'></span>の天気</h4>
     <ul>
       <li>天気：</li>
       <li>気温：</li>
       <li>湿度：</li>
     </ul>
-
-      
+    
   </body>
