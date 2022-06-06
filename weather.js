@@ -53,74 +53,86 @@ console.log(data.main.temp_min);
 let b = document.querySelector('#sendRequest');
 b.addEventListener('click', sendRequest);
 
-let i = document.querySelector('input[name=tenki]');
+let i = document.querySelector('input[name="tenki"]');
 let tenki = i.value;
 
 let tosi = [
-{id:360630,name:'カイロ'},
-{id:524901,name:'モスクワ'},
-{id:993800,name:'ヨハネスブルク'},
-{id:1816670,name:'北京'},
-{id:1850147,name:'東京'},
-{id:1880252,name:'シンガポール'},
-{id:2147714,name:'シドニー'},
-{id:2643743,name:'ロンドン'},
-{id:2968815,name:'パリ'},
-{id:3451189,name:'リオデジャネイロ'},
-{id:5128581,name:'ニューヨーク'},
-{id:5368361,name:'ロサンゼルス'}
+  { id: 360630, name: 'カイロ' },
+  { id: 524901, name: 'モスクワ' },
+  { id: 993800, name: 'ヨハネスブルク' },
+  { id: 1816670, name: '北京' },
+  { id: 1850147, name: '東京' },
+  { id: 1880252, name: 'シンガポール' },
+  { id: 2147714, name: 'シドニー' },
+  { id: 2643743, name: 'ロンドン' },
+  { id: 2968815, name: 'パリ' },
+  { id: 3451189, name: 'リオデジャネイロ' },
+  { id: 5128581, name: 'ニューヨーク' },
+  { id: 5368361, name: 'ロサンゼルス' }
 ];
 
 let ts;
-let issei =document.querySelector('takahashi');
+function sendRequest() {
 
-for(let i=0; i<tosi.length; i++){
-  if(tenki === tosi.name){
-    ts = tosi.id;
-    issei = tosi.name;
+  for (let i = 0; i < tosi.length; i++) {
+    if (tenki === tosi[i].name) {
+      ts = tosi[i].id;
+      issei = tosi[i].name + "の天気";
+      break;
+    } else {
+      issei = tenki + "はないよ(> <)";
+    }
   }
 
-}
+  let ti = document.querySelector('#takahashi');
+  ti.textContent = issei;
 
-// 通信を開始する処理
-function sendRequest() {
-  
 
-    // URL を設定
-    let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+ts+'.json';
 
-    // 通信開始
-    axios.get(url)
-        .then(showResult)   // 通信成功
-        .catch(showError)   // 通信失敗
-        .then(finish);      // 通信の最後の処理
+  // 通信を開始する処理
+
+
+  // URL を設定
+  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + ts + '.json';
+
+  // 通信開始
+  axios.get(url)
+    .then(showResult)   // 通信成功
+    .catch(showError)   // 通信失敗
+    .then(finish);      // 通信の最後の処理
 }
 console.log()
 
 // 通信が成功した時の処理
 function showResult(resp) {
-    // サーバから送られてきたデータを出力
-    let data = resp.data;
+  // サーバから送られてきたデータを出力
+  let data = resp.data;
 
-    // data が文字列型なら，オブジェクトに変換する
-    if (typeof data === 'string') {
-        data = JSON.parse(data);
-    }
+  // data が文字列型なら，オブジェクトに変換する
+  if (typeof data === 'string') {
+    data = JSON.parse(data);
+  }
 
-    // data をコンソールに出力
-    console.log(data);
+  // data をコンソールに出力
+  console.log(data);
+  let shou = document.querySelector('#nojima');
+  shou.textContent = data.weather[0].description;
+  let takanori = document.querySelector('#iwata');
+  takanori.textContent = data.main.temp_max + "℃";
+  let ryouma = document.querySelector('#takeuti');
+  ryouma.textContent = data.main.temp_min + "℃";
 
-    // data.x を出力
-    console.log(data.x);
+  // data.x を出力
+  console.log(data.x);
 }
 
 // 通信エラーが発生した時の処理
 function showError(err) {
-    console.log(err);
+  console.log(err);
 }
 
 // 通信の最後にいつも実行する処理
 function finish() {
-    console.log('Ajax 通信が終わりました');
+  console.log('Ajax 通信が終わりました');
 }
 
