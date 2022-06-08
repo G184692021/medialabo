@@ -28,10 +28,10 @@ a:hover {
     color: rgb(253, 136, 191);
 }
 
-#iwata {
-    color: #ff92a7;
+span#iwata {
+    color: #f78bc8
 }
 
 #takeuti {
-    color: #9892ff;
+    color: #8b9af7
 }
