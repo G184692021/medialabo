@@ -121,7 +121,8 @@ function showResult(resp) {
   takanori.textContent = data.main.temp_max + "℃";
   let ryouma = document.querySelector('#takeuti');
   ryouma.textContent = data.main.temp_min + "℃";
-
+  let masaki = document.querySelector('#suda');
+  masaki.textContent = data.main.humidity + "%";
   // data.x を出力
   console.log(data.x);
 }
