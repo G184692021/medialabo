@@ -53,26 +53,31 @@ console.log(data.main.temp_min);
 let b = document.querySelector('#sendRequest');
 b.addEventListener('click', sendRequest);
 
-let i = document.querySelector('input[name="tenki"]');
-let tenki = i.value;
 
-let tosi = [
-  { id: 360630, name: 'カイロ' },
-  { id: 524901, name: 'モスクワ' },
-  { id: 993800, name: 'ヨハネスブルク' },
-  { id: 1816670, name: '北京' },
-  { id: 1850147, name: '東京' },
-  { id: 1880252, name: 'シンガポール' },
-  { id: 2147714, name: 'シドニー' },
-  { id: 2643743, name: 'ロンドン' },
-  { id: 2968815, name: 'パリ' },
-  { id: 3451189, name: 'リオデジャネイロ' },
-  { id: 5128581, name: 'ニューヨーク' },
-  { id: 5368361, name: 'ロサンゼルス' }
-];
 
-let ts;
+
+
+
 function sendRequest() {
+  let ts;
+  let issei;
+  let tosi = [
+    { id: 360630, name: 'カイロ' },
+    { id: 524901, name: 'モスクワ' },
+    { id: 993800, name: 'ヨハネスブルク' },
+    { id: 1816670, name: '北京' },
+    { id: 1850147, name: '東京' },
+    { id: 1880252, name: 'シンガポール' },
+    { id: 2147714, name: 'シドニー' },
+    { id: 2643743, name: 'ロンドン' },
+    { id: 2968815, name: 'パリ' },
+    { id: 3451189, name: 'リオデジャネイロ' },
+    { id: 5128581, name: 'ニューヨーク' },
+    { id: 5368361, name: 'ロサンゼルス' }
+  ];
+  let i = document.querySelector('input[name="tenki"]');
+  let tenki = i.value;
+
 
   for (let i = 0; i < tosi.length; i++) {
     if (tenki === tosi[i].name) {
@@ -83,7 +88,6 @@ function sendRequest() {
       issei = tenki + "はないよ(> <)";
     }
   }
-
   let ti = document.querySelector('#takahashi');
   ti.textContent = issei;
 
@@ -105,6 +109,7 @@ console.log()
 
 // 通信が成功した時の処理
 function showResult(resp) {
+
   // サーバから送られてきたデータを出力
   let data = resp.data;
 
