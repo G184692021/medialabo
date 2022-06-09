@@ -53,26 +53,26 @@ console.log(data.main.temp_min);
 let b = document.querySelector('#sendRequest');
 b.addEventListener('click', sendRequest);
 
-let i = document.querySelector('input[name="tenki"]');
-let tenki = i.value;
-
-let tosi = [
-  { id: 360630, name: 'カイロ' },
-  { id: 524901, name: 'モスクワ' },
-  { id: 993800, name: 'ヨハネスブルク' },
-  { id: 1816670, name: '北京' },
-  { id: 1850147, name: '東京' },
-  { id: 1880252, name: 'シンガポール' },
-  { id: 2147714, name: 'シドニー' },
-  { id: 2643743, name: 'ロンドン' },
-  { id: 2968815, name: 'パリ' },
-  { id: 3451189, name: 'リオデジャネイロ' },
-  { id: 5128581, name: 'ニューヨーク' },
-  { id: 5368361, name: 'ロサンゼルス' }
-];
 
 let ts;
 function sendRequest() {
+  let i = document.querySelector('input[name="tenki"]');
+  let tenki = i.value;
+
+  let tosi = [
+    { id: 360630, name: 'カイロ' },
+    { id: 524901, name: 'モスクワ' },
+    { id: 993800, name: 'ヨハネスブルク' },
+    { id: 1816670, name: '北京' },
+    { id: 1850147, name: '東京' },
+    { id: 1880252, name: 'シンガポール' },
+    { id: 2147714, name: 'シドニー' },
+    { id: 2643743, name: 'ロンドン' },
+    { id: 2968815, name: 'パリ' },
+    { id: 3451189, name: 'リオデジャネイロ' },
+    { id: 5128581, name: 'ニューヨーク' },
+    { id: 5368361, name: 'ロサンゼルス' }
+  ];
 
   for (let i = 0; i < tosi.length; i++) {
     if (tenki === tosi[i].name) {
@@ -84,8 +84,6 @@ function sendRequest() {
     }
   }
 
-  let ti = document.querySelector('#takahashi');
-  ti.textContent = issei;
 
 
 
@@ -113,6 +111,11 @@ function showResult(resp) {
     data = JSON.parse(data);
   }
 
+
+
+
+  let ti = document.querySelector('#takahashi');
+  ti.textContent = issei;
   // data をコンソールに出力
   console.log(data);
   let shou = document.querySelector('#nojima');
@@ -121,7 +124,10 @@ function showResult(resp) {
   takanori.textContent = data.main.temp_max + "℃";
   let ryouma = document.querySelector('#takeuti');
   ryouma.textContent = data.main.temp_min + "℃";
-
+  let masaki = document.querySelector('#suda');
+  masaki.textContent = data.main.temp_min + "%";
+  let kento = document.querySelector('#yamazaki');
+  kento.textContent = data.wind.speed + "m/s";
   // data.x を出力
   console.log(data.x);
 }
