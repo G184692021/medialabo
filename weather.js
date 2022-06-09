@@ -128,6 +128,8 @@ function showResult(resp) {
   ryouma.textContent = data.main.temp_min + "℃";
   let masaki = document.querySelector('#suda');
   masaki.textContent = data.main.humidity + "%";
+  let kento = document.querySelector('#yamazaki');
+  kento.textContent = data.wind.speed + "m/s";
   // data.x を出力
   console.log(data.x);
 }
