@@ -1,25 +1,29 @@
-body{
-    background-color:rgb(191, 220, 247);
+body {
+    background-color: rgb(191, 220, 247);
 }
 
-h2,h3{
+h2,
+h3 {
     color: black;
 }
-h1{
-    color:black;
-    background:linear-gradient(-20deg,#fff,#9293e7)
+
+h1 {
+    color: black;
+    background: linear-gradient(-20deg, #fff, #9293e7)
 }
 
-p{
+p {
+    color: #3661ff;
+}
+
+ul#wa {
     color: #555657;
 }
 
-a:link{
-    color: rgb(248, 175, 209);
+span#iwata {
+    color: #f78bc8
 }
-a:visited{
-    color:#9293e7;
-}
-a:hover{
-    color:rgb(253, 136, 191);
+
+#takeuti {
+    color: #8b9af7
 }

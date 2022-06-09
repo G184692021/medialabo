@@ -1,75 +1,228 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>My test page</title><link rel="stylesheet" href="styles.css">
 
-    </head>
-    <body>
-       <h1>「Webコンテンツ作成の成果」</h1>
-       <h2>本テーマの学習目標</h2>
-       <p></p>
-       <h2>プロジェクト課題について</h2>
-       <p></p>
-       <h2>毎回の講義で作成したページ</h2>
-       <h3>第1回 HTMLによるWebページの構造の記述</h3>
-       <p></p>
-       <h4>練習1-4:リスト</h4>
-       <p>テキストだけで記述されていたレシピのHTMLを編集しました。見出しやリストなどの要素により文書の構造を記述しました。ここで使用したのはp要素、h1要素、ul要素、olなどです。</p>
-       <h4>練習1-5:ナビゲーションメニューの作成</h4>
-       <p><a href="./practice/picture.html">picture</a></p>
-       <p>practiceフォルダの4つのファイルをナビゲーションリンクにより接続しました。リンクの設置にはa要素を使いました。</p>
-       <h4>課題1-2:debug-example.html の修正</h4>
-       <p>practice/debug-example.htmlを修正しました。また、HTMLバリデーターなどを使用して、HTMLが整形式になったことを確認しました。</p>
-       <h4>課題1-3:index.html を作る</h4>
-       <p></p>
-      
-       <h3>第2回CSSによるWebページの装飾</h3>
+<head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+    <link rel="stylesheet" href="styles.css">
 
-       <h4>練習問題2-3: CSS の修正</h4>
-       <p><a href="./practice-css/index(1).html">index</a></p>
-       <h4>課題2-1: medialabo/index.html の CSS を作成する</h4>
-       <p>第1回の課題1-3 で作った medialabo/index.html の CSS を作成しました。</p>
-       <h4>課題2-2: project.html CSS の作成</h4>
-       <p>第1回の課題1-5 で作った project.html の CSS を作成しました。</p>
-       <h4>課題2-3: medialabo/index.html を編集しよう</h4>
-      
-       <h3>第3回JavaScriptの基本</h3>
-       <h4>課題3-5:プログラムを書き足す</h4>
-       <p><a href="./practice-js/jsintro.html">jsintoro</a></p>
-       <h4>練習3-6:オブジェクトの参照</h4>
-       <p><a href="./practice-js/obj-practice.html">obj-practice</a></p>
-       <h4>課題3-1:数当てゲームの作成</h4>
-       <p><a href="./practice-js/kazuate.html">kazuate</a></p>
-       <h4>課題3-2:オブジェクトからデータを取り出す</h4>
-       <p><a href="./project.html">project</a></p>
-       <h4>課題3-3:index.html を編集しよう</h4>
-       <p></p>
-       
-       <h3>第4回フォームとイベント処理</h3>
-       <h4>練習4-6:</h4>
-       <p></p>
-       <h4>練習4-7:</h4>
-       <p></p>
-       <h4>練習4-9:</h4>
-       <p><a href="./practice-dom/dom-demo.html ">dom-demo</a></p>
-       <h4>練習4-11:</h4>
-       <p><a herf="./practice-dom/div-span-demo1.html">div-span-demo1</a></p>
-       <h4>練習4-12:</h4>
-       <p><a herf="./practice-dom/div-demo2.html">div-span-demo2</a></p>
-       <h4>課題4-1:</h4>
-       <p><a href="./practice-js/kazuate.html">kazuate</a></p>
-       <h4>課題4-2:</h4>
-       <p></p>
-       <h4>課題4-3:</h4>
-       <p></p>
-       <h3>第5回Webページの動的な編集</h3>
-       <h4>練習5-2:</h4>
-       <p><a herf="./practice-event/event-intro.html">event-intro</a></p>
-       <h4>練習5-3:イベントを選択する</h4>
-       <p><a herf="./practice-event/event-list.html">event-list</a></p>
-       <h4>課題5-1:数当てゲームの完成</h4>
-       <p><a herf="./practice-js/kazuate.html">kazuate</a></p>
-       <h3>第6回Webページ作成演習</h3>
-    </body>
+</head>
+
+<body>
+    <h1>「Webコンテンツ作成の成果」</h1>
+    <h2>本テーマの学習目標</h2>
+    <ul>
+        <li>HTML によって Web ページの構造を記述する基本的な方法がわかる</li>
+        <li>CSS によって Web ページの見た目を設定する基本的な方法がわかる</li>
+        <li>JavaScript によって Web ページのインタラクティブな処理を記述する基本的な方法がわかる</li>
+        <li>HTML, CSS, JavaScript の構文リファレンスから，構文の書式や使用方法の情報を入手できる</li>
+        <li>HTML, CSS, JavaScript, 画像・音声・動画ファイルを組み合わせて簡単な Web ページが作成できる</li>
+    </ul>
+    <h2>プロジェクト課題について</h2>
+    <p>プロジェクト課題では、「世界の天気」を実施する。<br>リストにデータを表示できる都市名を一覧にし、その中から都市名をひとつ選んで検索ボックスに入力すると、その都市の天気・最高気温・最低気温・湿度・風速が表示されます。また、都市名は人の手で入力されるので、文字の打ち間違えなどがあった場合の表示についても考えました。
+    </p>
+    <h2>毎回の講義で作成したページ</h2>
+    <h3>第1回 HTMLによるWebページの構造の記述</h3>
+    <p>第1回ではHTMLの構造について学びました。<br>HTMLはWebページの構造を記述するための書式で、HTML文書を作成することによって、Webページに掲載するコンテンツと、ページの基本的なレイアウトを設定することができるということを学びました。<br>具体的に学んだ内容については次の通りです。
+    </p>
+    <ul>
+        <li>HTML文書の構成</li>
+        <li>HTMLテキストの要素</li>
+        <li>ハイパーリンク</li>
+        <li>HTMLのデバッグ</li>
+        <li>画像の埋め込み</li>
+        <li>HTML要素リファレンス</li>
+    </ul>
+    <p>以上のことを学びながら次の練習問題と課題に取り組みました。</p>
+    <h4>練習1-4:リスト</h4>
+    <p>テキストだけで記述されていたレシピのHTMLを編集しました。見出しやリストなどの要素により文書の構造を記述しました。ここで使用したのはp要素、h1要素、ul要素、olなどです。</p>
+    <P>編集したファイル<a href="practice/text-start.html">text-start.html</a></P>
+    <h4>練習1-5:ナビゲーションメニューの作成</h4>
+    <p>practiceフォルダの4つのファイルをナビゲーションリンクにより接続しました。リンクの設置にはa要素を使いました。</p>
+    <p>編集したファイル<a href="./practice/picture.html">picture.htnl</a></p>
+    <h4>課題1-2:debug-example.html の修正</h4>
+    <p>practice/debug-example.htmlを修正しました。また、HTMLバリデーターなどを使用して、HTMLが整形式になったことを確認しました。</p>
+    <p>修正したファイル<a href="practice/debug-example.html">debug-example.html</a></p>
+    <h4>課題1-3:index.html を作る</h4>
+    <p>index.htmlはこのページのHTMLファイルです。<br>今回の課題ではindex.htmlのテンプレートを作成しました.</p>
+
+    <h3>第2回CSSによるWebページの装飾</h3>
+    <p>第2回ではCSSについて学びました。<br>ページを装飾する記述のことをCSSと言います。CSSは要素の見た目を変更するものなので、HTMLが最初に与えられ、次にCSSを記述するという順番になります。<br>HTMLのそれぞれの要素に対して見た目の装飾を設定することができます。<br>具体的に学んだ内容については次の通りです。
+    </p>
+    <ul>
+        <li>CSSによる見た目の設定</li>
+        <li>CSSの全体像</li>
+        <li>ボックスモデル</li>
+        <li>レイアウト</li>
+        <li>CSSのデバッグ</li>
+    </ul>
+    <p>以上のことを学びながら次の練習問題と課題に取り組みました。</p>
+    <h4>練習問題2-3: CSS の修正</h4>
+    <p>ページが読み込むCSSファイルstyle.cssの誤りをウェブ開発ツールを使用し修正しました。 </p>
+    <p>修正したファイル<a href="./practice-css/index(1).html">index(1).html</a></p>
+    <h4>課題2-1: medialabo/index.html の CSS を作成する</h4>
+    <p>第1回の課題1-3 で作った medialabo/index.html の CSS を作成しました。</p>
+    <h4>課題2-2: project.html CSS の作成</h4>
+    <p>第1回の課題1-5 で作った project.html の CSS を作成しました。</p>
+    <h4>課題2-3: medialabo/index.html を編集しよう</h4>
+    <p>index.htmlはこのページのHTMLファイルです。</p>
+    <ul>
+        <li>第1回と第2回に学習した内容を記述しました。</li>
+        <li>第2回の成果物として4つの練習問題と課題の見出しと説明文を書きました。</li>
+    </ul>
+
+    <h3>第3回JavaScriptの基本</h3>
+    <p>第3回ではJavaScriptについて学びました。<br>JavaScriptはWebページ上で複雑な機能を実現するプログラミング言語です。Webページを開いた直後やボタンを押したときにJavaScriptプログラムが実行されます。ページの自動更新やアニメーションなど動きのあるページを実現するためにJavaScriptプログラムを使います。<br>具体的に学んだ内容については次の通りです。
+    </p>
+    <ul>
+        <li>JavaScriptでできること</li>
+        <li>ページにJavaを追加する</li>
+        <li>JavaとJavaScriptの違い</li>
+        <li>JavaScriptの構文</li>
+        <li>JavaScriptのデバッグ</li>
+        <li>情報入手方法</li>
+    </ul>
+    <p>以上のことを学びながら次の練習問題と課題に取り組みました。</p>
+    <h4>課題3-5:プログラムを書き足す</h4>
+    <p>練習3-4においてコンソールで実行したプログラムをpractice-js/hello.jsに書き足しました。</p>
+    <p>編集したファイル<a href="./practice-js/jsintro.html">jsintoro.html</a></p>
+    <h4>練習3-6:オブジェクトの参照</h4>
+    <p>practice-js/obj-practice.jsをVisual Studio Codeで開いて次の3つをコンソールに出力するようにプログラムを書き足しました。</p>
+    <ul>
+        <li>キャンパスの住所</li>
+        <li>D館の教室名</li>
+        <li>日本語の学科名</li>
+    </ul>
+    <p>編集したファイル<a href="./practice-js/obj-practice.html">obj-practice.html</a></p>
+    <h4>課題3-1:数当てゲームの作成</h4>
+    <p>kazuate.jsのテンプレートの空欄部分を埋め、完成させました。<br>コンソールには次のように出力するようにしました。</p>
+    <ul>
+        <li>最初に「◯回目の予想:4」をを出力</li>
+        <li>回答回数が4回以上:「答えは◯でした。すでにゲームは終わっています</li>
+        <li> 正解だった:「正解です。おめでとう!」</li>
+        <li>まちがいだった: <ul>
+                <li>3回目の回答: 「まちがい．残念でした答えは ◯ です．」</li>
+                <li>答え＞予想: 「まちがい．答えはもっと大きいですよ」</li>
+                <li>答え＜予想: 「まちがい．答えはもっと小さいですよ」</li>
+            </ul>
+        </li>
+    </ul>
+    <p>作成したファイル<a href="./practice-js/kazuate.html">kazuate.html</a></p>
+    <h4>課題3-2:オブジェクトからデータを取り出す</h4>
+    <p>テレビ番組表，グルメ情報，天気予報のサンプルデータを含むJavaScriptプログラムのテンプレートから一部の情報をコンソールに出力するプログラムを作成しました。<br>さらに、作成したJavaScriptプログラムをproject.htmlに組み込み、project.htmlをブラウザで開いてコンソールの出力を確認しました。
+    </p>
+    <p>編集したファイル<a href="./project.html">project.html</a></p>
+    <h4>課題3-3:index.html を編集しよう</h4>
+    <p>index.htmlはこのページのHTMLファイルです。</p>
+    <ul>
+        <li>第1回から第3回に学習した内容を記述しました。</li>
+        <li>第3回の成果物として5つの練習問題と課題の見出しと説明文を書きました。</li>
+    </ul>
+
+    <h3>第4回フォームとイベント処理</h3>
+    <p>第4回ではDOMについて学びました。<br>DOM（Document Object Model）は Web
+        コンテンツを表現するデータ構造です。DOMとJavaScriptを組み合わせることによってWebコンテンツの内容を読み取ったり、コンテンツに変更を加えたりといった動きのあるWebページを実現できるようになります。<br>具体的に学んだ内容については次の通りです。
+    </p>
+    <ul>
+        <li>DOMとは</li>
+        <li>DOMを使ってみよう</li>
+        <li>div要素とspan要素のススメ</li>
+        <li>DOMのデータ型</li>
+        <li>DOMのインタフェース</li>
+    </ul>
+    <p>以上のことを学びながら次の練習問題と課題に取り組みました。</p>
+    <h4>練習4-6:プログラムを組み込む</h4>
+    <p>新しいJavaScriptプログラムを作成してHTMLに組み込みました。<br><strong>手順</strong></p>
+    <ol>
+        <li>practice-dom/dom-demo.jsを新規作成</li>
+        <li>このファイルに、一つ前の演習でやった大陸のリストを7つに変更するプログラムを記述</li>
+        <li>このプログラムを、HTMLファイルpractice-dom/dom-demo.htmlに組み込む</li>
+        <li>Firefox でページを再読み込み</li>
+    </ol>
+    <h4>練習4-7:7大洋のリストを追加する</h4>
+    <p>practice-dom/dom-demo.jsの最後にプログラムを追加してから、空欄を埋めてプログラムを完成させました。<br>ページを再読み込みすると、7大洋のリストが追加表示されました。</p>
+    <h4>練習4-9:すべてのh2要素の背景色を変更する</h4>
+    <p>プログラムファイルpractice-dom/dom-demo.jsにプログラムを書き足し、見出し文字の背景が緑色になるように編集しました。</p>
+    <p>編集したファイル<a href="./practice-dom/dom-demo.html ">dom-demo.html</a></p>
+    <h4>練習4-11:プレースホルダーとしてのdiv要素とspan要素</h4>
+    <p>以下の手順でdiv要素とspan要素を「プレースホルダー」として使っていることを確認しました。</p>
+    <ol>
+        <li>Visual Studio Codeでファイルを開いて内容を確認</li>
+        <li>Firefoxでpractice-dom/div-span-demo1.htmlを開いてプログラムの実行結果を確認</li>
+        <li>Visual Studio Codeでpractice-dom-div-span-demo1.jsを開く</li>
+        <li>1行目と2行目の画像ファイル名と名前を変更してページを再読み込み</li>
+        <li>顔写真と名前が変わり，他の部分は変わらないことを確認</li>
+    </ol>
+    <p>編集したファイル<a href="./practice-dom/div-span-demo1.html">div-span-demo1.html</a></p>
+    <h4>練習4-12:写真表</h4>
+    <p>練習4-11で使った顔写真画像と名前を使って3人の写真表のページを考えました。</p>
+    <p>編集したファイル<a href="practice-dom/div-demo2.html">div-span-demo2.html</a></p>
+    <h4>課題4-1:数当てゲームのページを改良する</h4>
+    <p>数当てゲームの結果をコンソールではなく、ページに表示するように修正しました。<br><strong>修正点</strong></p>
+    <ul>
+        <li>kazuate.htmlには結果表示のためのプレースホルダーを追加しました。</li>
+        <li>kazuate.jsでは出力先をコンソールではなくHTMLにしました。</li>
+        <li>kazuate.jsの関数hantei()の呼び出し回数を4回から1回に減らしました。</li>
+    </ul>
+    <p>修正したファイル<a href="practice-js/kazuate.html">kazuate.html</a></p>
+    <h4>課題4-2:オブジェクトをページ上に表示する（プロジェクト課題）</h4>
+    <p>前回の課題3-2で作ったJavaScriptプログラムを改良して、ページ上にデータを表示しました。</p>
+    <ul>
+        <li>project.htmlに次の修正を加えました。</li>
+        <ul>
+            <li>前回作ったJavaScriptプログラムを組み込む</li>
+            <li>HTMLファイルの中でデータ項目を表示する要素をプレースホルダーに変更する</li>
+        </ul>
+        <li>project.jsの表示先をコンソールからHTMLに変更しました。</li>
+    </ul>
+    <h4>課題4-3:index.htmlを編集しよう</h4>
+    <p>index.htmlはこのページのHTMLファイルです</p>
+    <ul>
+        <li>第1回から第4回に学習した内容を記述しました。</li>
+        <li>第4回の成果物として8つの練習問題と課題の見出しと説明文を書きました。</li>
+    </ul>
+
+    <h3>第5回Webページの動的な編集</h3>
+    <p>第5回ではイベントについて学びました。<br>イベント は Web
+        ページ上で起こった動作や出来事のことです。（例：ユーザーがキーボードのキーを押す,ウェブページのロードの完了,フォームの送信...<br>具体的に学んだ内容については次の通りです。</p>
+    <ul>
+        <li>イベントとは</li>
+        <li>イベント処理の例</li>
+        <li>イベントの種類</li>
+        <li>input要素</li>
+        <li>イベント処理のデバッグ</li>
+    </ul>
+    <p>以上のことを学びながら次の練習問題と課題に取り組みました。</p>
+    <h4>練習5-2:イベントハンドラの登録を確認する</h4>
+    <p>イベントハンドラが登録されていることを確認し、新たにイベントハンドラを登録しました。</p>
+    <p>編集したファイル<a href="practice-event/event-intro.html">event-intro.html</a></p>
+    <h4>練習5-3:イベントを選択する</h4>
+    <p>JavaScriptプログラムで登録するイベントの種類を変更し、動作を確認しました。</p>
+    <p>編集したファイル<a href="practice-event/event-list.html">event-list</a></p>
+    <h4>課題5-1:数当てゲームの完成</h4>
+    <p>数当てゲームのページにに入力欄を設置してゲームを完成させました。<br><strong>修正点</strong></p>
+    <ul>
+        <li>kazuate.htmlの最初のp要素の中のテキストを削除して次の要素を設置しました。</li>
+        <li>kazuate.js において次の変更を加えました。</li>
+        <ul>
+            <li>hantei()の呼び出しを全て削除</li>
+            <li>回答ボタンのクリックイベントハンドラとしてhanteiを登録</li>
+            <li>hantei()の定義の中でyoso = 4;の4の代わりにテキストボックスの値を指定</li>
+        </ul>
+    </ul>
+    <p>完成したファイル<a href="practice-js/kazuate.html">kazuate.html</a></p>
+    <h3>第6回Webページ作成演習</h3>
+    <h4>課題5-2:検索欄を設置する（プロジェクト課題）</h4>
+    <p>project.htmlに検索用のinput要素やラベル、ボタンを設置しました。</p>
+    <h4>課題5-3:index.htmlを編集しよう</h4>
+    <p>index.htmlはこのページのHTMLファイルです</p>
+    <ul>
+        <li>第1回から第5回に学習した内容を記述しました。</li>
+        <li>第5回の成果物として8つの練習問題と課題の見出しと説明文を書きました。</li>
+    </ul>
+    <h2>工夫点，苦心点，強調点，感想</h2>
+    <p>私はもともとWebデザインに興味があり、この授業でWeb制作を学ぶ前から少しですがＨＴＭＬやＣＳＳについて自分で勉強していたので授業の初めは知っていた内容も多く、そこまで難しいと感じることはありませんでした。しかし、授業が進みJavaScriptなどの動的な処理を組み込むようになってくると一気に難易度が増しなかなか授業のペースについていけないことも多々ありました。<br>なので、苦心点は数えきれないほどありました。プロジェクト課題ではJavaScriptとHTMLがうまくかみ合わず、データが表示されなかったり思った通りの動きをしなかったりと、仕組みを理解するまでにかなりの時間がかかってしまいました。ページ上での工夫ではありませんが、JavaScriptとHTMLの間でidや変数名が分からなくならないようにHTMLには好きな芸能人の苗字を、JavaScriptには名前を使いどこが繋がっているのかを分かりやすくしたことが工夫点です。また、JavaScriptとJavaで書き方が共通している所とそうでないところがあり、プログラムの作成中に悩むことが多かったです。<br>レポート課題ではまずこんなに長くコードを書いたのが初めてだったので途中から自分でもどこまで作業しているのか分からなくなることがありました。また、これだけ文字のあるページをどうしたら飽きずに見やすいページにできるかというところで悩みました。それでもできるだけ各回ごとに説明のまとめ方をそろえてみたり、リンクや見出しに色を使ってみたりと自分なりに工夫してみました。私はデザインにも少し興味があったので、正直CSSで文字のどの色を考えているのが一番楽しかったです。<br>とにかく毎週分からないことだらけで、やっぱりWeb制作は奥が深くて面白いと感じていた半面、自分は本当にこの習った内容ができるようになるのかという不安もありました。それでも先生や先輩、周りの友人の助けもあり、授業のたびに楽しさを感じながらなんとか最後まで取り組むことができました。友人と一緒にやることでWebにはそれぞれ個性が出るということを改めて実感しました。また、周りの人に助けられながらでも以前よりプログラムの仕組みが見て分かるようになったことがうれしかったです。今回の授業で学んだことは本当に将来役に立つことだと思うし、自分が興味を持っていた分野なのでこれからさらにつきつめていければと思います。
+    </p>
+</body>
+
 </html>
