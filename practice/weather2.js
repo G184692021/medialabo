@@ -54,13 +54,11 @@ let b = document.querySelector('#sendRequest');
 b.addEventListener('click', sendRequest);
 
 
-
-
-
-
+let ts;
 function sendRequest() {
-  let ts;
-  let issei;
+  let i = document.querySelector('input[name="tenki"]');
+  let tenki = i.value;
+
   let tosi = [
     { id: 360630, name: 'カイロ' },
     { id: 524901, name: 'モスクワ' },
@@ -75,9 +73,6 @@ function sendRequest() {
     { id: 5128581, name: 'ニューヨーク' },
     { id: 5368361, name: 'ロサンゼルス' }
   ];
-  let i = document.querySelector('input[name="tenki"]');
-  let tenki = i.value;
-
 
   for (let i = 0; i < tosi.length; i++) {
     if (tenki === tosi[i].name) {
@@ -88,8 +83,7 @@ function sendRequest() {
       issei = tenki + "はないよ(> <)";
     }
   }
-  let ti = document.querySelector('#takahashi');
-  ti.textContent = issei;
+
 
 
 
@@ -109,7 +103,6 @@ console.log()
 
 // 通信が成功した時の処理
 function showResult(resp) {
-
   // サーバから送られてきたデータを出力
   let data = resp.data;
 
@@ -118,6 +111,11 @@ function showResult(resp) {
     data = JSON.parse(data);
   }
 
+
+
+
+  let ti = document.querySelector('#takahashi');
+  ti.textContent = issei;
   // data をコンソールに出力
   console.log(data);
   let shou = document.querySelector('#nojima');
@@ -127,7 +125,7 @@ function showResult(resp) {
   let ryouma = document.querySelector('#takeuti');
   ryouma.textContent = data.main.temp_min + "℃";
   let masaki = document.querySelector('#suda');
-  masaki.textContent = data.main.humidity + "%";
+  masaki.textContent = data.main.temp_min + "%";
   let kento = document.querySelector('#yamazaki');
   kento.textContent = data.wind.speed + "m/s";
   // data.x を出力
